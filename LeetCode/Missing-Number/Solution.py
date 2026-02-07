@@ -1,7 +1,4 @@
 1class Solution:
 2    def missingNumber(self, nums: List[int]) -> int:
-3        nums = sorted(nums)
-4        for i in range(len(nums)):
-5            if i != nums[i]:
-6                return i
-7        return len(nums)
+3        n = len(nums)
+4        return n*(n+1)//2 - sum(nums)
